@@ -1,5 +1,7 @@
 # Big Number Undo
 
+[![C++ self-checks](https://github.com/bashar9111/big-number-undo/actions/workflows/build.yml/badge.svg)](https://github.com/bashar9111/big-number-undo/actions/workflows/build.yml)
+
 A recovered C++17 data-structures exercise: store a number as a string, delete a digit by index and undo deletions in last-in-first-out order with a stack. Leading zeroes are preserved. It is not an arbitrary-precision arithmetic library.
 
 ## Build and run
@@ -13,4 +15,4 @@ The original C++ code was saved as a C# Program.cs file. This edition puts it in
 
 Compile without NDEBUG to run the self-checks.
 
-Validation limitation: the available Visual Studio installation lacks the C++ compiler headers/SDK, so compilation and the assertions could not be executed in this preparation environment.
+Validation: GitHub Actions compiled the source with g++ in C++17 mode and ran the self-checks successfully. The local Visual Studio installation lacked C++ headers/SDK, so the successful build was verified on GitHub rather than locally.
