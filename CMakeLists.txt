@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(BigNumberUndo LANGUAGES CXX)
+add_executable(big_number_undo main.cpp)
+target_compile_features(big_number_undo PRIVATE cxx_std_17)
+enable_testing()
+add_test(NAME undo_self_checks COMMAND big_number_undo)
