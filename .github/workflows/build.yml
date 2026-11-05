@@ -1,0 +1,18 @@
+name: C++ self-checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Build with warnings
+        run: g++ -std=c++17 -Wall -Wextra -pedantic main.cpp -o big_number_undo
+      - name: Run undo self-checks
+        run: ./big_number_undo
